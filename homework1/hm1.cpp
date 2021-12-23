@@ -33,6 +33,7 @@ int main() {
     while (file >> xn >> yn) {
         
         new_cos = (xn * x0 + yn * y0) / (sqrt((xn * xn + yn * yn) * (x0 * x0 + y0 * y0)));
+        new_cos = round(new_cos * 1000) / 1000;
         
         if ((x0 * yn - y0 * xn) > 0) {
             if (new_cos < cos_l) {
@@ -40,8 +41,8 @@ int main() {
                 final_x_left = xn;
                 final_y_left = yn;
             } else if (cos_l == new_cos) {
-                float new_dist = sqrt(xn * xn + yn * yn);
-                float prev_dist = sqrt(final_x_left * final_x_left + final_y_left * final_y_left);
+                float new_dist = round(sqrt(xn * xn + yn * yn) * 1000) / 1000;
+                float prev_dist = round(sqrt(final_x_left * final_x_left + final_y_left * final_y_left) * 1000) / 1000;
                 if (new_dist > prev_dist) {
                     cos_l = new_cos;
                     final_x_left = xn;
@@ -55,8 +56,8 @@ int main() {
                 final_y_right = yn;
             }
             else if (cos_r == new_cos) {
-                float new_dist = sqrt(xn * xn + yn * yn);
-                float prev_dist = sqrt(final_x_right * final_x_right + final_y_right * final_y_right);
+                float new_dist = round(sqrt(xn * xn + yn * yn)* 1000) / 1000;
+                float prev_dist = round(sqrt(final_x_right * final_x_right + final_y_right * final_y_right)* 1000) / 1000;
                 if (new_dist > prev_dist) {
                     cos_r = new_cos;
                     final_x_right = xn;
