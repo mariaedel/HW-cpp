@@ -4,7 +4,7 @@ project(homework1 VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(homework1 main.cpp)
+add_executable(homework1 hm1.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
