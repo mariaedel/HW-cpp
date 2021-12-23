@@ -14,12 +14,14 @@ int main() {
 
     float x0;
     float y0;
+    
+    file >> x0 >> y0;
 
-    float final_x_right = 0;
-    float final_y_right = 0;
+    float final_x_right = x0;
+    float final_y_right = y0;
 
-    float final_x_left = 0;
-    float final_y_left = 0;
+    float final_x_left = x0;
+    float final_y_left = y0;
 
     float cos_r = 1;
     float cos_l = 1;
@@ -27,8 +29,6 @@ int main() {
     float dist_r = 0;
 
     float new_cos = -1;
-
-    file >> x0 >> y0;
 
     while (file) {
 
