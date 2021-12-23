@@ -17,18 +17,18 @@ int main() {
     
     file >> x0 >> y0;
 
-    float final_x_right = x0;
-    float final_y_right = y0;
+    float final_x_right = 0;
+    float final_y_right = 0;
 
-    float final_x_left = x0;
-    float final_y_left = y0;
+    float final_x_left = 0;
+    float final_y_left = 0;
 
     float cos_r = 1;
     float cos_l = 1;
     float dist_l = 0;
     float dist_r = 0;
 
-    float new_cos = -1;
+    float new_cos;
 
     while (file) {
 
