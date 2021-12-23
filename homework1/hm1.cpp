@@ -30,7 +30,7 @@ int main() {
 
     float new_cos;
 
-    while (file) {
+    while (!file.eof()) {
 
         file >> xn >> yn;
         new_cos = (xn * x0 + yn * y0) / (sqrt((xn * xn + yn * yn) * (x0 * x0 + y0 * y0)));
