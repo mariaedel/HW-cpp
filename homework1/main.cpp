@@ -6,11 +6,8 @@
 using namespace std;
 
 int main() {
-    cout << "file name: ";
-    string file_name;
-    cin >> file_name;
 
-    ifstream file(file_name);
+    ifstream file("in.txt");
 
     float xn;
     float yn;
